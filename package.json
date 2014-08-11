@@ -1,0 +1,9 @@
+{
+  "name": "colebemis",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-stylus": "^1.3.0",
+    "nib": "^1.0.3"
+  }
+}
