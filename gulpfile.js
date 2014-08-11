@@ -8,7 +8,7 @@ var paths = {
 }
 
 gulp.task('stylus', function () {
-  gulp.src(paths.stylus)
+  gulp.src('./css/stylus/style.styl')
     .pipe(stylus({use: [nib()], errors: true}))
     .pipe(gulp.dest('./css'));
 });
