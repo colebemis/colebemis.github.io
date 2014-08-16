@@ -2,14 +2,16 @@ var gulp = require('gulp');
 
 var stylus = require('gulp-stylus');
 var nib = require('nib');
+var minify = require('gulp-minify-css');
 
 var paths = {
   stylus: './css/stylus/*.styl'
 }
 
 gulp.task('stylus', function () {
-  gulp.src('./css/stylus/style.styl')
+  gulp.src(paths.stylus)
     .pipe(stylus({use: [nib()], errors: true}))
+    .pipe(minify())
     .pipe(gulp.dest('./css'));
 });
 
