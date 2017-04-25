@@ -1,32 +1,45 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="I'm Cole Bemis, a Web/UI Designer and Front-end Developer based in Portland, Oregon.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cole Bemis</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1 class="logo">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve">
-        <path d="M36,26c0,5.52-4.48,10-10,10H10c-1.1,0-2-0.9-2-2s0.9-2,2-2h16c3.31,0,6-2.69,6-6s-2.69-6-6-6H10c-1.1,0-2-0.9-2-2
-          c0-1.1,0.9-2,2-2h16c3.31,0,6-2.69,6-6s-2.69-6-6-6H10C8.9,4,8,3.1,8,2s0.9-2,2-2h16c5.52,0,10,4.48,10,10c0,3.27-1.58,6.18-4.01,8
-          C34.42,19.82,36,22.73,36,26z"></path>
-        <path d="M28,26c0,1.1-0.9,2-2,2H10C4.48,28,0,23.52,0,18C0,12.48,4.48,8,10,8h16c1.1,0,2,0.9,2,2s-0.9,2-2,2H10c-3.31,0-6,2.69-6,6
-        c0,3.31,2.69,6,6,6h16C27.1,24,28,24.9,28,26z"></path>
-      </svg>
-    </h1>
-
-    <p class="bio">
-      I'm Cole Bemis, a UX/UI Designer and Front-end Developer based in Portland, Oregon.
-    </p>
-    <ul class="links">
-      <li><a href="http://twitter.com/colebemis" target="_blank">Twitter</a></li>
-      <li><a href="http://dribbble.com/colebemis" target="_blank">Dribbble</a></li>
-      <li><a href="http://github.com/colebemis" target="_blank">GitHub</a></li>
-      <li><a href="mailto:info@colebemis.com">Email</a></li>
+    <div class="logo">
+      {% include_relative colebemis-logo.svg %}
+    </div>
+    <div class="about">
+      <h1 class="about-heading">
+        Hello, I&rsquo;m Cole Bemis. Frontend developer, designer, lifelong learner, dog lover.
+      </h1>
+      <p class="about-body">
+        Studying computer science at <a class="about-link" href="https://csc.calpoly.edu" target="_blank">Cal Poly</a>.
+        Intern at <a class="about-link" href="https://ifixit.com" target="_blank">iFixit</a>.
+      </p>
+    </div>
+    <ul class="social">
+      <li class="social-item">
+        <a class="social-link" href="#" target="_blank">Twitter</a>
+      </li>
+      <li class="social-item">
+        <a class="social-link" href="#" target="_blank">GitHub</a>
+      </li>
+      <li class="social-item">
+        <a class="social-link" href="#" target="_blank">Dribbble</a>
+      </li>
+      <li class="social-item">
+        <a class="social-link" href="#" target="_blank">LinkedIn</a>
+      </li>
+      <li class="social-item">
+        <a class="social-link" href="#" target="_blank">Email</a>
+      </li>
     </ul>
   </div>
 </body>
