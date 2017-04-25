@@ -6,6 +6,8 @@
   --color-secondary: rgba(0, 0, 0, 0.5);
   --color-border: rgba(0, 0, 0, 0.1);
   --color-background: #ffffff;
+
+  --transition-duration: 200ms;
 }
 
 /* General */
@@ -56,6 +58,16 @@ a {
   margin: 0;
 }
 
+.about-link {
+  padding: 0.125rem 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: color var(--transition-duration);
+}
+
+.about-link:hover {
+  color: var(--color-accent);
+}
+
 /* Social */
 
 .social {
@@ -74,4 +86,9 @@ a {
   display: inline-block;
   width: 100%;
   padding: 1rem 0;
+  transition: color var(--transition-duration);
+}
+
+.social-link:hover {
+  color: var(--color-accent);
 }
