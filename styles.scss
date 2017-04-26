@@ -1,13 +1,23 @@
+---
+---
 /* Variables */
 
 :root {
-  --color-accent: #ff3333;
+  --color-accent: #f03e3e;
   --color-primary: rgba(0, 0, 0, 0.8);
   --color-secondary: rgba(0, 0, 0, 0.5);
   --color-border: rgba(0, 0, 0, 0.1);
   --color-background: #ffffff;
 
   --transition-duration: 200ms;
+}
+
+$breakpoint: 42rem;
+
+@mixin for-breakpoint-up {
+  @media (min-width: $breakpoint) {
+    @content;
+   }
 }
 
 /* General */
@@ -21,11 +31,13 @@ body {
   -webkit-text-size-adjust: 100%;  /* Prevent font scaling in landscape */
   color: var(--color-secondary);
   background-color: var(--color-background);
+  cursor: default;
 }
 
 a {
   color: currentColor;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* Container */
@@ -33,6 +45,11 @@ a {
 .container {
   min-height: 100vh;
   padding: 0 10%;
+
+  @include for-breakpoint-up {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Logo */
@@ -43,9 +60,23 @@ a {
   justify-content: center;
   padding: 3rem 0;
   color: var(--color-accent);
+
+  @include for-breakpoint-up {
+    flex: 0 0 auto;
+    padding: 5rem 0;
+  }
 }
 
 /* About */
+
+.about {
+  @include for-breakpoint-up {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
 .about-heading {
   margin: 0 0 1em;
@@ -53,14 +84,23 @@ a {
   font-weight: 400;
   line-height: 1.4;
   color: var(--color-primary);
+
+  @include for-breakpoint-up {
+    font-size: 2.25rem;
+    max-width: 14em;
+  }
 }
 
 .about-body {
   margin: 0;
+
+  @include for-breakpoint-up {
+    font-size: 1.125rem;
+  }
 }
 
 .about-link {
-  padding: 0.125rem 0;
+  padding: 0.125em 0;
   border-bottom: 1px solid var(--color-border);
   transition: color var(--transition-duration);
 }
@@ -77,10 +117,21 @@ a {
   flex-direction: column;
   margin: 0;
   padding: 3rem 0;
+
+  @include for-breakpoint-up {
+    flex: 0 0 auto;
+    flex-direction: row;
+    padding: 5rem 0;
+  }
 }
 
 .social-item + .social-item {
   border-top: 1px solid var(--color-border);
+
+  @include for-breakpoint-up {
+    border-top: none;
+    margin-left: 2em;
+  }
 }
 
 .social-link {
@@ -88,6 +139,10 @@ a {
   width: 100%;
   padding: 1rem 0;
   transition: color var(--transition-duration);
+
+  @include for-breakpoint-up {
+    padding: 0.5rem 0;
+  }
 }
 
 .social-link:hover {
