@@ -45,6 +45,10 @@ links:
       font-family: "Rubik", sans-serif;
     }
   </style>
+
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
 </head>
 <body class="rubik black-60">
 
@@ -72,21 +76,21 @@ links:
       <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal lh-copy bb b--black-20">Projects</h2>
       <ul class=" flex flex-wrap justify-between mv0 pl0 list">
         {% for project in page.projects %}
-          <li class="w-100 w-30-l mt4 mt5-ns">
-            <a class="dib link black-90 hover-dark-red" href="{{ project.link }}" target="_blank">
-              <h3 class="mt0 mb2 f4 f3-ns normal lh-copy measure-narrow">{{ project.name }}</h3>
-              <p class="mv0 lh-copy measure">{{ project.description }}</p>
-            </a>
-          </li>
+        <li class="w-100 w-30-l mt4 mt5-ns">
+          <a class="dib link black-90 hover-dark-red" href="{{ project.link }}" target="_blank">
+            <h3 class="mt0 mb2 f4 f3-ns normal lh-copy measure-narrow">{{ project.name }}</h3>
+            <p class="mv0 lh-copy measure">{{ project.description }}</p>
+          </a>
+        </li>
         {% endfor %}
       </ul>
     </div>
 
     <ul class="flex flex-column flex-row-l mv0 pv4 pv5-ns pl0 list f5">
       {% for link in page.links %}
-        <li class="mr4-l pv3">
-          <a class="link color-inherit hover-dark-red" href="{{ link.url }}" target="_blank">{{ link.name }}</a>
-        </li>
+      <li class="mr4-l pv3">
+        <a class="link color-inherit hover-dark-red" href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      </li>
       {% endfor %}
     </ul>
 
