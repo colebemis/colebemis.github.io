@@ -1,6 +1,19 @@
 ---
 title: Cole Bemis
+
 description: Frontend developer, designer, lifelong learner, dog lover.
+
+projects:
+- name: Feather
+  description: Simply beautiful open source icons
+  link: http://colebemis.com/feather
+- name: Tabio
+  description: Effortless tab management for Chrome
+  link: http://colebemis.com/tabio
+- name: Analog
+  description: Replace your new tab page with a minimal analog clock
+  link: http://github.com/colebemis/analog
+
 links:
 - name: Twitter
   url: http://twitter.com/colebemis
@@ -35,9 +48,9 @@ links:
 </head>
 <body class="rubik black-60">
 
-  <div class="flex flex-column w-80 min-vh-100-ns center">
+  <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
 
-    <div class="pv5 dark-red">
+    <div class="pv4 pv5-ns dark-red">
       <svg viewBox="0 0 36 36" width="36" height="36" fill="currentColor">
         <title>Cole Bemis Logo</title>
         <path d="M36,26c0,5.52-4.48,10-10,10H10c-1.1,0-2-0.9-2-2s0.9-2,2-2h16c3.31,0,6-2.69,6-6s-2.69-6-6-6H10c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2h16c3.31,0,6-2.69,6-6s-2.69-6-6-6H10C8.9,4,8,3.1,8,2s0.9-2,2-2h16c5.52,0,10,4.48,10,10c0,3.27-1.58,6.18-4.01,8 C34.42,19.82,36,22.73,36,26z"></path>
@@ -45,17 +58,31 @@ links:
       </svg>
     </div>
 
-    <div class="flex-auto flex flex-column justify-center">
+    <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
       <h1 class="mt0 mb4 f3 f2-ns normal lh-copy lh-title-ns measure-narrow black-90">
         Hello, I&rsquo;m Cole Bemis. {{ page.description }}
       </h1>
       <p class="mv0 f5 f4-ns lh-copy measure">
-        Studying computer science at <a class="link color-inherit hover-dark-red bb" href="https://csc.calpoly.edu" target="_blank">Cal Poly</a>.
-        Intern at <a class="link color-inherit hover-dark-red bb" href="https://ifixit.com" target="_blank">iFixit</a>.
+        Studying computer science at <a class="link color-inherit bb hover-dark-red" href="https://csc.calpoly.edu" target="_blank">Cal Poly</a>.
+        Intern at <a class="link color-inherit bb hover-dark-red" href="https://ifixit.com" target="_blank">iFixit</a>.
       </p>
     </div>
 
-    <ul class="flex flex-column flex-row-l mv0 pv5 pl0 list f5">
+    <div class="pv4 pv5-ns">
+      <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal lh-copy bb b--black-20">Projects</h2>
+      <ul class=" flex flex-wrap justify-between mv0 pl0 list">
+        {% for project in page.projects %}
+          <li class="w-100 w-30-l mt4 mt5-ns">
+            <a class="dib link black-90 hover-dark-red" href="{{ project.link }}" target="_blank">
+              <h3 class="mt0 mb2 f4 f3-ns normal lh-copy measure-narrow">{{ project.name }}</h3>
+              <p class="mv0 lh-copy measure">{{ project.description }}</p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <ul class="flex flex-column flex-row-l mv0 pv4 pv5-ns pl0 list f5">
       {% for link in page.links %}
         <li class="mr4-l pv3">
           <a class="link color-inherit hover-dark-red" href="{{ link.url }}" target="_blank">{{ link.name }}</a>
