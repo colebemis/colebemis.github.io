@@ -1,3 +1,2 @@
-https://colebemis.netlify.com/feather  https://colebemis.netlify.com/feather/ 301!
-/feather      https://feather.netlify.com           200!
+/feather      https://feather.netlify.com/           200!
 /feather/*    https://feather.netlify.com/:splat    200!
