@@ -4,15 +4,26 @@ title: Cole Bemis
 description: Frontend developer, designer, lifelong learner, dog lover.
 
 projects:
+
 - name: Feather
+  client: Personal
   description: Simply beautiful open source icons
-  link: https://feather.netlify.com
+  link: https://feathericons.com
+
 - name: Tabio
+  client: Personal
   description: Effortless tab management for Chrome
   link: http://colebemis.com/tabio
+
 - name: Analog
+  client: Personal
   description: Replace your new tab page with a minimal analog clock
   link: http://github.com/colebemis/analog
+
+- name: Carbon
+  client: Personal
+  description: Simple, lightweight and responsive CSS grid system
+  link: http://github.com/colebemis/carbon
 
 links:
 - name: Twitter
@@ -67,7 +78,7 @@ links:
     </div>
 
     <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
-      <h1 class="mt0 mb4 f3 f2-m f1-l normal lh-copy lh-title-ns measure-narrow black-90">
+      <h1 class="mt0 mb4 f3 f2-m f1-l normal lh-copy lh-title-ns measure-narrow black-80">
         Hello, I&rsquo;m Cole Bemis. {{ page.description }}
       </h1>
       <p class="mv0 f5 f4-ns lh-copy measure">
@@ -77,13 +88,14 @@ links:
     </div>
 
     <div class="pv4 pv5-ns">
-      <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal lh-copy bb b--black-20">Projects</h2>
+      <h2 class="mv0 pb2 pb3-ns f5 f4-ns normal lh-copy bb b--black-10">Projects</h2>
       <ul class=" flex flex-wrap justify-between mv0 pl0 list">
         {% for project in page.projects %}
-        <li class="w-100 w-30-l mt4 mt5-ns">
-          <a class="dib no-underline black-90 color-animate hover-dark-red" href="{{ project.link }}" target="_blank">
-            <h3 class="mt0 mb1 mb2-ns f4 f3-ns normal lh-copy measure-narrow">{{ project.name }}</h3>
-            <p class="mv0 lh-copy measure">{{ project.description }}</p>
+        <li class="w-100 w-30-l pv4 pv5-ns pb0-l bb b--black-10 bn-l">
+          <a class="dib no-underline black-80 color-animate hover-dark-red" href="{{ project.link }}" target="_blank">
+            <p class="mv0 f7 f6-ns lh-copy ttu tracked dark-red">{{ project.client }}</p>
+            <h3 class="mt0 mb1 mb2-ns f3 f2-ns normal lh-copy measure-narrow">{{ project.name }}</h3>
+            <p class="mv0 lh-copy measure black-60">{{ project.description }}</p>
           </a>
         </li>
         {% endfor %}
