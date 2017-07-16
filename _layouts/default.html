@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}" >
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta name="twitter:card" content="summary">
+
+  <link href="https://unpkg.com/tachyons/css/tachyons.min.css" rel="stylesheet">
+  <style>
+    .color-animate,
+    .color-animate:hover,
+    .color-animate:focus {
+      transition: color .15s;
+    }
+  </style>
+
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
+  {% endif %}
+</head>
+<body class="sans-serif black-60">
+  {{ content }}
+</body>
+</html>

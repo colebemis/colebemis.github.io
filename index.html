@@ -1,55 +1,23 @@
 ---
+layout: default
 title: Cole Bemis
 description: Frontend developer, designer, lifelong learner, dog lover.
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
 
-  <title>{{ page.title }}</title>
-  <meta name="description" content="{{ page.description }}" >
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:description" content="{{ page.description }}">
-  <meta name="twitter:card" content="summary">
+  {% include header.html %}
 
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-  <link href="https://unpkg.com/tachyons/css/tachyons.min.css" rel="stylesheet">
-  <style>
-    .rubik {
-      font-family: "Rubik", sans-serif;
-    }
-
-    .color-animate,
-    .color-animate:hover,
-    .color-animate:focus {
-      transition: color .15s;
-    }
-  </style>
-
-  {% if site.google_analytics and jekyll.environment == 'production' %}
-    {% include analytics.html %}
-  {% endif %}
-</head>
-<body class="rubik black-60">
-  <div class="flex flex-column w-80 mw9 pv4 pv0-ns center">
-
-    {% include header.html %}
-
-    <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
-      <h1 class="mt0 mb4 f3 f2-m f1-l normal lh-copy lh-title-ns measure-narrow black-80">
-        Hello, I&rsquo;m Cole Bemis. {{ page.description }}
-      </h1>
-      <p class="mv0 f5 f4-ns lh-copy measure">
-        Studying computer science at <a class="no-underline color-inherit bb color-animate hover-dark-red" href="https://csc.calpoly.edu" target="_blank">Cal Poly</a>.
-        Intern at <a class="no-underline color-inherit bb color-animate hover-dark-red" href="https://ifixit.com" target="_blank">iFixit</a>.
-      </p>
-    </div>
-
-    {% include projects.html %}
-    {% include footer.html %}
-
+  <div class="flex-auto flex flex-column justify-center pv4 pv5-ns">
+    <h1 class="mt0 mb4 fw5 f3 f2-m f1-l normal lh-copy lh-title-ns measure-narrow black-80">
+      Hello, I&rsquo;m Cole Bemis. {{ page.description }}
+    </h1>
+    <p class="mv0 f5 f4-ns lh-copy measure">
+      Studying computer science at <a class="no-underline color-inherit bb color-animate hover-dark-red" href="https://csc.calpoly.edu" target="_blank">Cal Poly</a>.
+      Intern at <a class="no-underline color-inherit bb color-animate hover-dark-red" href="https://ifixit.com" target="_blank">iFixit</a>.
+    </p>
   </div>
-</body>
-</html>
+
+  {% include projects.html %}
+  {% include footer.html %}
+
+</div>
