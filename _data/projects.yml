@@ -1,0 +1,19 @@
+- name: Feather
+  client: Personal
+  description: Simply beautiful open source icons
+  link: https://feathericons.com
+
+- name: Tabio
+  client: Personal
+  description: Effortless tab management for Chrome
+  link: http://colebemis.com/tabio
+
+- name: Analog
+  client: Personal
+  description: Replace your new tab page with a minimal analog clock
+  link: http://github.com/colebemis/analog
+
+- name: Carbon
+  client: Personal
+  description: Simple, lightweight and responsive CSS grid system
+  link: http://github.com/colebemis/carbon

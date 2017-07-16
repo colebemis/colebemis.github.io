@@ -1,0 +1,14 @@
+- name: Twitter
+  url: http://twitter.com/colebemis
+
+- name: GitHub
+  url: http://github.com/colebemis
+
+- name: Dribbble
+  url: http://dribbble.com/colebemis
+
+- name: LinkedIn
+  url: http://linkedin.com/in/colebemis
+
+- name: Email
+  url: mailto:cole@colebemis.com
