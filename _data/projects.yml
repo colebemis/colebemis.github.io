@@ -5,7 +5,7 @@
 
 - name: Tabio
   client: Personal
-  description: Effortless tab management for Chrome
+  description: An open source tab manager for Chrome
   link: http://colebemis.com/tabio
 
 - name: Analog
