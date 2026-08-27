@@ -42,11 +42,17 @@
       gap: 1.5rem;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
+    .photo {
       margin-bottom: 0.5rem;
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 8px;
     }
 
     h1 {
@@ -85,7 +91,9 @@
 </head>
 <body>
   <div class="container">
-    <img src="/colebemis.jpg" alt="Cole Bemis" width="1080" height="1080">
+    <div class="photo">
+      <img src="/colebemis.jpg" alt="Cole Bemis" width="1080" height="1080">
+    </div>
     <h1>Hi, I&rsquo;m Cole.</h1>
     <p>I build things for people who build things.</p>
     <p>I&rsquo;m currently a Design Engineer at <a href="https://notion.so">Notion</a> in San Francisco.</p>
